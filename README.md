@@ -1,1 +1,1 @@
-# Cheesecake
+This repository is for HW3 in CS 341
