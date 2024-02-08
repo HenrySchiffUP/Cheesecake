@@ -1,3 +1,8 @@
+/*
+    Henry Schiff
+    CS 341 Homework 3
+*/
+
 $(document).ready(function() {
 
     // initially hide the order details
