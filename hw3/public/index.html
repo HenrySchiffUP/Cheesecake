@@ -1,0 +1,110 @@
+<!--
+    Henry Schiff
+    CS 341 Homework 2
+-->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../stylesheets/cheesecake.css">
+        <script 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/
+        ></script>
+        <script
+            src="./javascripts/cheesecake.js"
+        ></script>
+    </head>
+    <body>
+        <div id="page">
+
+            <h1>Cheesecake Order Form</h1>
+            <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/1200px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"
+                width="200px" height="200px"
+            >
+    
+            <!-- Form with selecter, radio and textarea inputs -->
+            <form>
+    
+                <p>Quantity Topping</p>
+    
+                <table>
+                    <tr>
+                        <!-- First column of table -->
+                        <td>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+            
+                        <!-- Second column of table. 
+                            "name" prevents multiple buttons from being selected -->
+                        <td>
+                            <input type="radio" id="topping1" value="Plain" name="topping" checked="true">
+                            <label for="topping1">Plain</label><br>
+                            <input type="radio" id="topping2" value="Cherry" name="topping">
+                            <label for="topping2">Cherry</label><br>  
+                            <input type="radio" id="topping3" value="Chocolate" name="topping">
+                            <label for="topping3">Chocolate</label><br><br>
+                        </td>
+                    </tr>
+                </table>
+    
+                <label>Notes:</label>
+                <br>
+                <textarea 
+                    rows="5" cols="50" 
+                    placeholder="Enter any special instructions here."
+                    id="notesTextArea"
+                ></textarea>
+                <br><br>
+    
+                <!-- Submits the form -->
+                <button id="formSubmitButton" type="button">Order</button>
+    
+            </form>
+    
+            <div id="orderDetails">
+                <p>Thank you! Your order has been placed. Order details:</p>
+                <p>Quantity: <span id="quantityText"></span></p>
+                <p>Topping: <span id="toppingText"></span></p>
+                <p>Notes: <span id="notesText"></span></p>
+            </div>
+    
+            <div>
+                <div id="ordersTitle">
+                    <h3>Orders from</h3>
+
+                    <!-- This hoverable dropdown menu was adapted from here:
+                    https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Jan</button>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-option">Jan</a>
+                            <a href="#" class="dropdown-option">Feb</a>
+                            <a href="#" class="dropdown-option">Mar</a>
+                            <a href="#" class="dropdown-option">Apr</a>
+                            <a href="#" class="dropdown-option">May</a>
+                            <a href="#" class="dropdown-option">Jun</a>
+                            <a href="#" class="dropdown-option">Jul</a>
+                            <a href="#" class="dropdown-option">Aug</a>
+                            <a href="#" class="dropdown-option">Sep</a>
+                            <a href="#" class="dropdown-option">Oct</a>
+                            <a href="#" class="dropdown-option">Nov</a>
+                            <a href="#" class="dropdown-option">Dec</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <ul>
+                    <li>11 cherry</li>
+                    <li>17 chocolate</li>
+                    <li>31 plain</li>
+                </ul>
+            </div>
+
+        </div>
+    </body>
+</html>
